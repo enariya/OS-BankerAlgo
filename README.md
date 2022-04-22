@@ -6,6 +6,7 @@ Implementing the Banker’s algorithm and checking if the system in a safe state
 **Compile Instruction:**
 
 c++ banker.cpp
+
 ./a.out file1.txt  //or replace the file name
 
 **Example:**
