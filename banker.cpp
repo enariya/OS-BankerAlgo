@@ -52,11 +52,11 @@ int main(int argc, char *argv[])
             task[i][2][2] = task[i][1][2] - task[i][0][2];
       }
 
-      std::cout << "Process \t Allocation \t Max \t Need"<< std::endl;
+      std::cout << "Process  Allocation \t Max \t\t Need"<< std::endl;
 
       for(int i = 0; i < 5; ++i)
       {
-          std::cout << "P" << i << "\t " << task[i][0][0] <<" "<< task[i][0][1] << " " << task[i][0][2] << '\t';
+          std::cout << "p" << i << "\t " << task[i][0][0] <<" "<< task[i][0][1] << " " << task[i][0][2] << '\t';
           std::cout << '\t' << task[i][1][0] <<" "<< task[i][1][1] << " " << task[i][1][2] << '\t';
           std::cout << '\t'<<task[i][2][0] <<" "<< task[i][2][1] << " " << task[i][2][2] << std::endl;
       }
@@ -64,12 +64,12 @@ int main(int argc, char *argv[])
       for(int j = 0; tmp <= 4; ++j)
       {
           int i = (j%6);
-          if(task[i][2][0] <= avail[0] & task[i][2][1] <= avail[1] & task[i][2][2] <= avail[2] & flag[i] == 0)
+          if(task[i][2][0] <= avail[0] & task[i][2][1] <= avail[1] & task[i][2][2] <= avail[2] & arr[i] == 0)
           {
-              avail[0] += task[i][0][0];
-              avail[1] += task[i][0][1];
-              avail[2] += task[i][0][2];
-              ss[tmp[]] = i;
+              avail[0] = avail[0]+task[i][0][0];
+              avail[1] = avail[1]+task[i][0][1];
+              avail[2] = avail[2]+task[i][0][2];
+              ss[tmp] = i;
               ++tmp;
               check = 0;
               arr[i] = 1;
